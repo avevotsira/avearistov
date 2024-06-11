@@ -16,7 +16,7 @@ const CONFIG = {
   },
   title: {
     tag: "h3",
-    tw: "scroll-m-20 text-base font-semibold tracking-tight",
+    tw: "scroll-m-20 text-lg font-semibold tracking-tight",
   },
   caption: {
     tag: "h4",
@@ -64,3 +64,4 @@ export default function Text({
     </DynamicText>
   );
 }
+

@@ -14,14 +14,22 @@ export default {
     extend: {
       colors: {
         "neon-pink": "hsl(330, 100%, 50%)",
+        "lime-mint-green": "hsl(150, 90%, 58%)", // Complementary to neon-pink
+        "light-pink": "hsl(330, 100%, 70%)", // Lighter shade for backgrounds
+        "dark-pink": "hsl(330, 100%, 30%)", // Darker shade for backgrounds
+        "red-pink": "hsl(350, 100%, 50%)", // Analogous color
+        magenta: "hsl(310, 100%, 50%)", // Analogous color
+        "deep-blue": "hsl(210, 100%, 30%)", // Complements Lime Mint Green
+        "dark-cyan": "hsl(180, 100%, 30%)", // Complements Lime Mint Green
+        "rich-purple": "hsl(270, 90%, 60%)",
         "neon-green": "hsl(120, 100%, 50%)",
-        "electric-blue": "hsl(190, 100%, 50%)",
+        "electric-blue": "hsl(190, 100%, 70%)",
         "neon-purple": "hsl(280, 100%, 50%)",
         "neon-red": "hsl(0, 100%, 50%)",
-        "bright-yellow": "hsl(60, 100%, 50%)",
-
+        "bright-yellow": "hsl(60, 70%, 50%)",
         turquoise: "hsl(175, 100%, 41%)",
-
+        "darken-pink": "hsl(330, 0%, 50%)",
+        "vibrant-orange": "hsl(30, 100%, 50%)",
         "dark-purple": "hsl(270, 50%, 25%)",
         "dark-violet": "hsl(280, 60%, 30%)",
 
