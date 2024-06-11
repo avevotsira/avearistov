@@ -14,12 +14,17 @@ export default {
     extend: {
       colors: {
         "neon-pink": "hsl(330, 100%, 50%)",
+        "neon-green": "hsl(120, 100%, 50%)",
+        "electric-blue": "hsl(190, 100%, 50%)",
         "neon-purple": "hsl(280, 100%, 50%)",
-        "neon-green": "hsl(100, 100%, 50%)",
-        "electric-blue": "hsl(200, 100%, 50%)",
-        "neon-orange": "hsl(20, 100%, 50%)",
-        "neon-yellow": "hsl(60, 100%, 50%)",
         "neon-red": "hsl(0, 100%, 50%)",
+        "bright-yellow": "hsl(60, 100%, 50%)",
+
+        turquoise: "hsl(175, 100%, 41%)",
+
+        "dark-purple": "hsl(270, 50%, 25%)",
+        "dark-violet": "hsl(280, 60%, 30%)",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
