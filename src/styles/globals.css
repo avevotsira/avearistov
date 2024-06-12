@@ -69,5 +69,10 @@
     box-shadow: 0 0 3px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink)),
       0 0 9px hsl(var(--neon-pink)), 0 0 12px hsl(var(--neon-pink));
   }
+
+  .shadow-neon-pink-light {
+    box-shadow: 0 0 1.5px hsl(var(--neon-pink)), 0 0 3px hsl(var(--neon-pink)),
+      0 0 5px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink));
+  }
 }
 

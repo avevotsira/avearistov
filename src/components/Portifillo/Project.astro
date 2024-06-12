@@ -1,5 +1,6 @@
 ---
 import Text from "@/components/Text";
+import HorizontalCard from "./HorizontalCard";
 ---
 
 <section
@@ -8,9 +9,20 @@ import Text from "@/components/Text";
   <Text variant="smallheading" className="mb-6"> My Digital Craft </Text>
   <div class="space-y-6">
     <Text variant="paragraph" className="text-lg leading-relaxed">
-      Journey with me through the contributions I've made in the open-source
-      world, where each project is a chapter in the ongoing story of our digital
-      landscape.
+      Journey with me through my open-source contributions, each project a
+      chapter in our digital landscape's story.
     </Text>
+    <div class="space-y-4">
+      <HorizontalCard
+        title="LibSQL Studio"
+        description="LibSQL and rqlite client on your browser"
+        link="https://libsqlstudio.com/"
+      />
+      <HorizontalCard
+        title="KhmerCoders"
+        description="A unified blog platform for khmer coders."
+        link="https://khmer.codes"
+      />
+    </div>
   </div>
 </section>
