@@ -61,6 +61,30 @@
 }
 
 @layer utilities {
+  @keyframes neonPinkPulse {
+    0%,
+    100% {
+      box-shadow: 0 0 3px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink)),
+        0 0 9px hsl(var(--neon-pink)), 0 0 12px hsl(var(--neon-pink));
+    }
+    50% {
+      box-shadow: 0 0 4px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink)),
+        0 0 12px hsl(var(--neon-pink)), 0 0 16px hsl(var(--neon-pink));
+    }
+  }
+
+  @keyframes neonPinkLightPulse {
+    0%,
+    100% {
+      box-shadow: 0 0 1.5px hsl(var(--neon-pink)), 0 0 3px hsl(var(--neon-pink)),
+        0 0 5px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink));
+    }
+    50% {
+      box-shadow: 0 0 2px hsl(var(--neon-pink)), 0 0 4px hsl(var(--neon-pink)),
+        0 0 6px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink));
+    }
+  }
+
   .border-neon-pink {
     border-color: hsl(var(--neon-pink));
   }
@@ -74,5 +98,16 @@
     box-shadow: 0 0 1.5px hsl(var(--neon-pink)), 0 0 3px hsl(var(--neon-pink)),
       0 0 5px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink));
   }
-}
 
+  .shadow-neon-pink-light-pulse {
+    box-shadow: 0 0 1.5px hsl(var(--neon-pink)), 0 0 3px hsl(var(--neon-pink)),
+      0 0 5px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink));
+    animation: neonPinkLightPulse 2s infinite;
+  }
+
+  .shadow-neon-pink-pulse {
+    box-shadow: 0 0 3px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink)),
+      0 0 9px hsl(var(--neon-pink)), 0 0 12px hsl(var(--neon-pink));
+    animation: neonPinkPulse 2s infinite;
+  }
+}

@@ -28,7 +28,7 @@ const CONFIG = {
   },
   small: {
     tag: "p",
-    tw: "leading-6 text-sm",
+    tw: "leading-6  text-sm",
   },
   background: {
     tag: "p",
@@ -36,7 +36,7 @@ const CONFIG = {
   },
   paragraph: {
     tag: "p",
-    tw: "leading-7 text-base [&:not(:first-child)]:mt-6",
+    tw: "leading-7 text-base indent-4 [&:not(:first-child)]:mt-6",
   },
 } as const;
 
@@ -64,4 +64,3 @@ export default function Text({
     </DynamicText>
   );
 }
-
