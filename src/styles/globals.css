@@ -150,9 +150,14 @@
       box-shadow: 0 0 4px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink)),
         0 0 12px hsl(var(--neon-pink)), 0 0 16px hsl(var(--neon-pink));
     }
+    25%,
+    75% {
+      box-shadow: 0 0 2px hsl(var(--neon-pink)), 0 0 4px hsl(var(--neon-pink)),
+        0 0 6px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink));
+    }
   }
 
   .neon-box-pulse-slow {
-    animation: subtleNeonPulse 2s infinite;
+    animation: subtleNeonPulse 6s infinite;
   }
 }
