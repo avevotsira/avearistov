@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "shadow-neon-pink-light text-primary-foreground transition-transform transform hover:-translate-y-0.5 duration-200",
+          "shadow-neon-pink-light-pulse text-primary-foreground transition-transform transform hover:-translate-y-0.5 duration-200",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
