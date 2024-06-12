@@ -1,0 +1,47 @@
+---
+import Text from "@/components/Text";
+
+const jobExperiences = [
+  {
+    title: "Full Stack Developer - Digital Government Committee",
+    period: "Dec 2023 - Present",
+    description: `Working on-site in Phnom Penh, Cambodia, utilizing Spring Boot and TypeScript among other technologies.`,
+  },
+  {
+    title: "Lead Software Developer - Free Lance",
+    period: "May 2023 - Oct 2023",
+    description: `Developed a custom solution for whitelisting user accounts for a Project Zomboid server using Valve's RCON Protocol. Designed and implemented a user-friendly interface for server management. Led a team of four to enhance user experience. Integrated OAuth2 for secure login and a Discord bot for role management.`,
+  },
+  {
+    title: "Back End Developer - Meka Asia",
+    period: "Feb 2023 - Jun 2023",
+    description: `Developed, tested, and deployed RESTful APIs using NestJs with serverless architecture. Managed database migrations, structure, and data. Debugged and maintained existing code.`,
+  },
+  {
+    title: "Back End Developer - Groupin",
+    period: "Feb 2022 - Feb 2023",
+    description: `Developed APIs for L192's Social Media. Managed database migrations and structure. Migrated the API from RESTful to GraphQL to optimize data transfer and reduce network load.`,
+  },
+];
+---
+
+<section class="container mx-auto p-8">
+  <Text variant="smallheading" className="mb-8">Job Experience</Text>
+  <div class="border-l-2 border-dashed border-gray-500 pl-4">
+    <div class="space-y-8">
+      {
+        jobExperiences.map((job) => (
+          <div>
+            <Text variant="title">{job.title}</Text>
+            <Text variant="small" className="text-neon-pink">
+              {job.period}
+            </Text>
+            <Text variant="small" className="mt-2 text-pretty">
+              {job.description}
+            </Text>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
