@@ -8,13 +8,12 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1024px",
       },
     },
     extend: {
       colors: {
-        "neon-pink": "hsl(330, 100%, 50%)",
-
+        "neon-pink": "hsl(var(--neon-pink))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -24,6 +24,7 @@
     --input: 215 27.9% 16.9%;
     --ring: 263.4 70% 50.4%;
     --radius: 0.5rem;
+    --neon-pink: 330, 100%, 50%;
   }
 
   .dark {
@@ -46,6 +47,7 @@
     --border: 215 27.9% 16.9%;
     --input: 215 27.9% 16.9%;
     --ring: 263.4 70% 50.4%;
+    --neon-pink: 330, 100%, 50%;
   }
 }
 
@@ -60,12 +62,12 @@
 
 @layer utilities {
   .border-neon-pink {
-    border-color: hsl(330, 100%, 50%);
+    border-color: hsl(var(--neon-pink));
   }
 
   .shadow-neon-pink {
-    box-shadow: 0 0 3px hsl(330, 100%, 50%), 0 0 6px hsl(330, 100%, 50%),
-      0 0 9px hsl(330, 100%, 50%), 0 0 12px hsl(330, 100%, 50%);
+    box-shadow: 0 0 3px hsl(var(--neon-pink)), 0 0 6px hsl(var(--neon-pink)),
+      0 0 9px hsl(var(--neon-pink)), 0 0 12px hsl(var(--neon-pink));
   }
 }
 
