@@ -20,7 +20,7 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
 }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" className="block">
-      <Card className="flex-col items-center shadow-md rounded-md transition-transform transform hover:-translate-y-1">
+      <Card className="flex-col items-center shadow-md rounded-md transition-transform transform hover:-translate-y-0.5 duration-200">
         <CardHeader className="flex-shrink-0">
           <CardTitle className="text-base font-bold">{title}</CardTitle>
         </CardHeader>
