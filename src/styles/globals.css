@@ -158,6 +158,6 @@
   }
 
   .neon-box-pulse-slow {
-    animation: subtleNeonPulse 6s infinite;
+    animation: subtleNeonPulse 4s infinite;
   }
 }
