@@ -35,7 +35,7 @@ const SocialMediaLinks: React.FC = () => {
               className="flex items-center justify-center space-x-1"
             >
               {link.icon && (
-                <span className="icon w-5 h-5 flex items-center">
+                <span className="icon w-5 h-5 flex items-center neon-pulse-slow">
                   {link.icon}
                 </span>
               )}

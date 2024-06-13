@@ -123,12 +123,14 @@
   @keyframes neonPulse {
     0%,
     100% {
-      text-shadow: 0 0 2px hsla(var(--neon-pink), 0.5),
-        0 0 4px hsla(var(--neon-pink), 0.4), 0 0 6px hsla(var(--neon-pink), 0.3);
+      text-shadow: 0 0 3px hsla(var(--neon-pink), 0.75),
+        0 0 6px hsla(var(--neon-pink), 0.65),
+        0 0 9px hsla(var(--neon-pink), 0.55);
     }
     50% {
-      text-shadow: 0 0 1px hsla(var(--neon-pink), 0.5),
-        0 0 2px hsla(var(--neon-pink), 0.4), 0 0 3px hsla(var(--neon-pink), 0.3);
+      text-shadow: 0 0 1.5px hsla(var(--neon-pink), 0.75),
+        0 0 3px hsla(var(--neon-pink), 0.65),
+        0 0 4.5px hsla(var(--neon-pink), 0.55);
     }
     25%,
     75% {
@@ -160,4 +162,37 @@
   .neon-box-pulse-slow {
     animation: subtleNeonPulse 4s infinite;
   }
+
+  @keyframes neonBorderPulse {
+    0%,
+    100% {
+      border-color: hsl(var(--neon-pink));
+    }
+    50% {
+      border-color: hsla(var(--neon-pink), 0.75);
+    }
+    25%,
+    75% {
+      border-color: hsla(var(--neon-pink), 0.65);
+    }
+  }
+
+  .neon-border-pulse-slow {
+    animation: neonBorderPulse 4s infinite;
+  }
+
+  @keyframes svgNeonPulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .svg-neon-pulse {
+    animation: svgNeonPulse 4s infinite;
+  }
 }
+

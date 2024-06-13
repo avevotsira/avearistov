@@ -5,7 +5,8 @@ const jobExperiences = [
   {
     title: "Full Stack Developer - Digital Government Committee",
     period: "Dec 2023 - Present",
-    description: "Working on-site in Phnom Penh, Cambodia, utilizing Spring Boot and TypeScript among other technologies.",
+    description:
+      "Working on-site in Phnom Penh, Cambodia, utilizing Spring Boot and TypeScript among other technologies.",
   },
   {
     title: "Lead Software Developer - Free Lance",
@@ -15,7 +16,8 @@ const jobExperiences = [
   {
     title: "Back End Developer - Meka Asia",
     period: "Feb 2023 - Jun 2023",
-    description: "Developed, tested, and deployed RESTful APIs using NestJs with serverless architecture. Managed database migrations, structure, and data. Debugged and maintained existing code.",
+    description:
+      "Developed, tested, and deployed RESTful APIs using NestJs with serverless architecture. Managed database migrations, structure, and data. Debugged and maintained existing code.",
   },
   {
     title: "Back End Developer - Groupin",
@@ -27,7 +29,11 @@ const jobExperiences = [
 
 <section class="container mx-auto p-8">
   <Text variant="smallheading" className="mb-8">Job Experience</Text>
-  <div class="border-l-2 border-dashed border-gray-500 pl-4">
+  <div class="relative pl-4">
+    <div
+      class="absolute left-0 top-0 bottom-0 w-0.5 border-l-2 border-dashed neon-border-pulse-slow"
+    >
+    </div>
     <div class="space-y-8">
       {
         jobExperiences.map((job) => (
