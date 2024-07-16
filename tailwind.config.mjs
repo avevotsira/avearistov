@@ -4,6 +4,16 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   prefix: "",
   theme: {
+    fontSize: {
+      sm: "0.9375rem",
+      base: "1.125rem",
+      lg: "1.25rem",
+      xl: "1.5rem",
+      "2xl": "1.75rem",
+      "3xl": "2rem",
+      "4xl": "2.25rem",
+      "5xl": "2.5rem",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -12,6 +22,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Anuphan", "sans-serif"],
+      },
       colors: {
         "neon-pink": "hsl(var(--neon-pink))",
         border: "hsl(var(--border))",
