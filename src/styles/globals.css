@@ -81,18 +81,6 @@
     --neon-pink-light-shadow-4: 0 0 6px hsl(var(--neon-pink));
   }
 
-  @keyframes neonPinkPulse {
-    0%,
-    100% {
-      box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-        var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-    }
-    50% {
-      box-shadow: 0 0 4px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink)),
-        0 0 12px hsl(var(--neon-pink)), 0 0 16px hsl(var(--neon-pink));
-    }
-  }
-
   @keyframes neonPinkLightPulse {
     0%,
     100% {
@@ -106,26 +94,10 @@
     }
   }
 
-  .shadow-neon-pink {
-    box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-      var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-  }
-
-  .shadow-neon-pink-light {
-    box-shadow: var(--neon-pink-light-shadow-1), var(--neon-pink-light-shadow-2),
-      var(--neon-pink-light-shadow-3), var(--neon-pink-light-shadow-4);
-  }
-
   .shadow-neon-pink-light-pulse {
     box-shadow: var(--neon-pink-light-shadow-1), var(--neon-pink-light-shadow-2),
       var(--neon-pink-light-shadow-3), var(--neon-pink-light-shadow-4);
     animation: neonPinkLightPulse 2s infinite;
-  }
-
-  .shadow-neon-pink-pulse {
-    box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-      var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-    animation: neonPinkPulse 2s infinite;
   }
 
   @keyframes neonPulse {
@@ -146,29 +118,8 @@
     }
   }
 
-  .neon-pulse-slow {
-    animation: neonPulse 4s infinite;
-  }
-
-  @keyframes subtleNeonPulse {
-    0%,
-    100% {
-      box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-        var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-    }
-    50% {
-      box-shadow: 0 0 4px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink)),
-        0 0 12px hsl(var(--neon-pink)), 0 0 16px hsl(var(--neon-pink));
-    }
-    25%,
-    75% {
-      box-shadow: 0 0 2px hsl(var(--neon-pink)), 0 0 4px hsl(var(--neon-pink)),
-        0 0 6px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink));
-    }
-  }
-
-  .neon-box-pulse-slow {
-    animation: subtleNeonPulse 4s infinite;
+  .neon-pulse-slow-text {
+    animation: neonPulse 8s infinite;
   }
 
   @keyframes neonBorderPulse {
