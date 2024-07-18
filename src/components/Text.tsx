@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "@/lib/utils";
 
 const CONFIG = {
@@ -36,7 +35,7 @@ const CONFIG = {
   },
   paragraph: {
     tag: "p",
-    tw: "leading-7 text-base indent-4 [&:not(:first-child)]:mt-6",
+    tw: "leading-7 text-base [&:not(:first-child)]:mt-6",
   },
 } as const;
 

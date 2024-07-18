@@ -12,50 +12,28 @@
 
 @layer base {
   :root {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
+    --background: 330 71.4% 1.5%;
+    --foreground: 25, 25%, 93%;
+    --card: 330 71.4% 1.5%;
+    --card-foreground: 25, 25%, 93%;
+    --popover: 330 71.4% 1.5%;
+    --popover-foreground: 25, 25%, 93%;
     --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
+    --primary-foreground: 25, 25%, 93%;
     --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary-foreground: 25, 25%, 93%;
     --muted: 215 27.9% 16.9%;
     --muted-foreground: 217.9 10.6% 64.9%;
     --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
+    --accent-foreground: 25, 25%, 93%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 25, 25%, 93%;
     --border: 215 27.9% 16.9%;
     --input: 215 27.9% 16.9%;
     --ring: 263.4 70% 50.4%;
     --radius: 0.5rem;
-    --neon-pink: 330, 100%, 50%;
-  }
-
-  .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 263.4 70% 50.4%;
-    --neon-pink: 330, 100%, 50%;
+    --neon-pink: 330, 90%, 50%;
+    --space-2xl: clamp(2rem, 1.6522rem + 1.7391vw, 3rem);
   }
 }
 
@@ -81,18 +59,6 @@
     --neon-pink-light-shadow-4: 0 0 6px hsl(var(--neon-pink));
   }
 
-  @keyframes neonPinkPulse {
-    0%,
-    100% {
-      box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-        var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-    }
-    50% {
-      box-shadow: 0 0 4px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink)),
-        0 0 12px hsl(var(--neon-pink)), 0 0 16px hsl(var(--neon-pink));
-    }
-  }
-
   @keyframes neonPinkLightPulse {
     0%,
     100% {
@@ -106,26 +72,10 @@
     }
   }
 
-  .shadow-neon-pink {
-    box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-      var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-  }
-
-  .shadow-neon-pink-light {
-    box-shadow: var(--neon-pink-light-shadow-1), var(--neon-pink-light-shadow-2),
-      var(--neon-pink-light-shadow-3), var(--neon-pink-light-shadow-4);
-  }
-
   .shadow-neon-pink-light-pulse {
     box-shadow: var(--neon-pink-light-shadow-1), var(--neon-pink-light-shadow-2),
       var(--neon-pink-light-shadow-3), var(--neon-pink-light-shadow-4);
     animation: neonPinkLightPulse 2s infinite;
-  }
-
-  .shadow-neon-pink-pulse {
-    box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-      var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-    animation: neonPinkPulse 2s infinite;
   }
 
   @keyframes neonPulse {
@@ -146,29 +96,8 @@
     }
   }
 
-  .neon-pulse-slow {
-    animation: neonPulse 4s infinite;
-  }
-
-  @keyframes subtleNeonPulse {
-    0%,
-    100% {
-      box-shadow: var(--neon-pink-shadow-1), var(--neon-pink-shadow-2),
-        var(--neon-pink-shadow-3), var(--neon-pink-shadow-4);
-    }
-    50% {
-      box-shadow: 0 0 4px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink)),
-        0 0 12px hsl(var(--neon-pink)), 0 0 16px hsl(var(--neon-pink));
-    }
-    25%,
-    75% {
-      box-shadow: 0 0 2px hsl(var(--neon-pink)), 0 0 4px hsl(var(--neon-pink)),
-        0 0 6px hsl(var(--neon-pink)), 0 0 8px hsl(var(--neon-pink));
-    }
-  }
-
-  .neon-box-pulse-slow {
-    animation: subtleNeonPulse 4s infinite;
+  .neon-pulse-slow-text {
+    animation: neonPulse 8s infinite;
   }
 
   @keyframes neonBorderPulse {
@@ -201,5 +130,78 @@
 
   .svg-neon-pulse {
     animation: svgNeonPulse 4s infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .project {
+    padding-top: var(--space-2xl);
+  }
+
+  .sticky-content {
+    padding-block: var(--space-2xl);
+    position: sticky;
+    bottom: 0;
+    align-self: flex-end;
+    flex-basis: 100%;
+    background-image: linear-gradient(
+      to top,
+      var(--background) 40%,
+      transparent
+    );
+  }
+
+  .media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: var(--radius);
+    transform-origin: top center;
+  }
+
+  @supports (animation-timeline: view()) {
+    .project:not(:last-of-type) {
+      animation: fadeOut linear forwards;
+      animation-range: cover 70% cover 95%;
+      animation-timeline: view();
+    }
+
+    .media {
+      animation: fadeIn ease-in-out both, fadeOut ease-in forwards;
+      animation-range: cover 30% contain 50%, contain 90% cover 100%;
+      animation-timeline: view();
+    }
+  }
+
+  .media video,
+  /* something weird if i dont add img width */
+  .media img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .media + .media {
+    margin-top: var(--space-xl);
   }
 }

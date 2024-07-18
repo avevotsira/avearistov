@@ -27,7 +27,7 @@ const jobExperiences = [
 ];
 ---
 
-<section class="container mx-auto p-8">
+<section class="container mx-auto p-8" aria-label="Job Experience">
   <Text variant="smallheading" className="mb-8">Job Experience</Text>
   <div class="relative pl-4">
     <div
@@ -39,10 +39,13 @@ const jobExperiences = [
         jobExperiences.map((job) => (
           <div>
             <Text variant="title">{job.title}</Text>
-            <Text variant="small" className="text-neon-pink neon-pulse-slow">
+            <Text
+              variant="small"
+              className="text-neon-pink neon-pulse-slow-text"
+            >
               {job.period}
             </Text>
-            <Text variant="small" className="mt-2 text-pretty indent-4">
+            <Text variant="small" className="mt-2 text-pretty">
               {job.description}
             </Text>
           </div>

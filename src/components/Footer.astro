@@ -1,5 +1,6 @@
 ---
 import Text from "@/components/Text";
+import { ExternalLink } from "lucide-react";
 ---
 
 <footer class="bg-background text-foreground py-8">
@@ -9,9 +10,21 @@ import Text from "@/components/Text";
         <a href="/">
           <Text variant="title" className="text-lg font-bold">Ave Aristov</Text>
         </a>
-        <Text variant="body" className="text-sm"
-          >© 2023 Ave Aristov. All rights reserved.</Text
-        >
+        <Text variant="body" className="text-sm">
+          © 2024 Ave Aristov. All rights reserved.
+        </Text>
+      </div>
+      <div class="text-sm">
+        <Text variant="body">
+          Powered by <a
+            href="https://astro.build"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neon-pink hover:underline"
+          >
+            Astro
+          </a>
+        </Text>
       </div>
     </div>
   </div>

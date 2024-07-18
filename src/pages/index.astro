@@ -2,14 +2,21 @@
 import AboutMe from "@/components/AboutMe.astro";
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
-import Portifllo from "@/components/Portifillo/Portifllo.astro";
 import Experince from "@/components/Experince/Experince.astro";
 import Cyberware from "@/components/Cyberware/Cyberware.astro";
+import Contact from "@/components/Portifillo/Contact.astro";
+import Project from "@/components/Portifillo/Project.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+  <p
+    class="container p-8 text-center bg-destructive text-destructive-foreground"
+  >
+    Site under construction!
+  </p>
   <AboutMe />
-  <Portifllo />
+  <Project />
+  <Contact />
   <Cyberware />
   <Experince />
 </Layout>

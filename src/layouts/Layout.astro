@@ -56,11 +56,16 @@ const jsonLd = {
     <meta name="twitter:image" content={imageUrl} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
-  <Navbar />
+
+  <header class="sticky top-0 z-50">
+    <Navbar />
+  </header>
   <body>
     <main>
       <slot />
     </main>
     <Footer />
   </body>
+
+
 </html>

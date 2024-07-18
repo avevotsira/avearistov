@@ -24,8 +24,8 @@ const links = [
 
 const SocialMediaLinks: React.FC = () => {
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-wrap justify-start px-2">
+    <div className="flex">
+      <div className="flex flex-wrap justify-start">
         {links.map((link) => (
           <Button asChild className="mx-2 mb-4" key={link.href}>
             <a
@@ -35,7 +35,7 @@ const SocialMediaLinks: React.FC = () => {
               className="flex items-center justify-center space-x-1"
             >
               {link.icon && (
-                <span className="icon w-5 h-5 flex items-center neon-pulse-slow">
+                <span className="icon w-5 h-5 flex items-center neon-pulse-slow-text">
                   {link.icon}
                 </span>
               )}
@@ -49,4 +49,3 @@ const SocialMediaLinks: React.FC = () => {
 };
 
 export default SocialMediaLinks;
-
