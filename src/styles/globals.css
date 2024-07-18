@@ -33,6 +33,7 @@
     --ring: 263.4 70% 50.4%;
     --radius: 0.5rem;
     --neon-pink: 330, 90%, 50%;
+    --space-2xl: clamp(2rem, 1.6522rem + 1.7391vw, 3rem);
   }
 }
 
@@ -129,5 +130,78 @@
 
   .svg-neon-pulse {
     animation: svgNeonPulse 4s infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .project {
+    padding-top: var(--space-2xl);
+  }
+
+  .sticky-content {
+    padding-block: var(--space-2xl);
+    position: sticky;
+    bottom: 0;
+    align-self: flex-end;
+    flex-basis: 100%;
+    background-image: linear-gradient(
+      to top,
+      var(--background) 40%,
+      transparent
+    );
+  }
+
+  .media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: var(--radius);
+    transform-origin: top center;
+  }
+
+  @supports (animation-timeline: view()) {
+    .project:not(:last-of-type) {
+      animation: fadeOut linear forwards;
+      animation-range: cover 70% cover 95%;
+      animation-timeline: view();
+    }
+
+    .media {
+      animation: fadeIn ease-in-out both, fadeOut ease-in forwards;
+      animation-range: cover 30% contain 50%, contain 90% cover 100%;
+      animation-timeline: view();
+    }
+  }
+
+  .media video,
+  /* something weird if i dont add img width */
+  .media img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .media + .media {
+    margin-top: var(--space-xl);
   }
 }

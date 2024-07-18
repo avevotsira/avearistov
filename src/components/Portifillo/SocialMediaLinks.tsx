@@ -24,8 +24,8 @@ const links = [
 
 const SocialMediaLinks: React.FC = () => {
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-wrap justify-start px-2">
+    <div className="flex">
+      <div className="flex flex-wrap justify-start">
         {links.map((link) => (
           <Button asChild className="mx-2 mb-4" key={link.href}>
             <a

@@ -1,26 +1,68 @@
 ---
 import Text from "@/components/Text";
 import HorizontalCard from "./HorizontalCard";
+import { Image } from "astro:assets";
+import khmerBlog from "src/assets/pictures/khmerblog.png";
 ---
 
-<section class="mx-auto text-foreground grow h-full rounded-md">
-  <Text variant="smallheading" className="mb-6"> Open Source Chronicles </Text>
+<section
+  class="mx-auto text-foreground grow h-full rounded-md"
+  aria-label="Open Source Chronicles"
+>
+  <Text variant="smallheading" className="mb-6">Open Source Chronicles</Text>
   <div class="space-y-6 text-pretty">
-    <Text variant="paragraph" className="text-lg leading-relaxed">
+    <Text variant="paragraph">
       Jack into their open-source contributions, each project a chapter in the
       ever-evolving story of our digital realm.
     </Text>
-    <div class="space-y-4">
-      <HorizontalCard
-        title="LibSQL Studio"
-        description="Dive into LibSQL Studio, your cyberdeck for exploring LibSQL and rqlite directly from your browser."
-        link="https://libsqlstudio.com/"
-      />
-      <HorizontalCard
-        title="KhmerCoders"
-        description="A nexus where Khmer coders converge to innovate and thrive in the digital expanse."
-        link="https://khmer.codes"
-      />
-    </div>
+
+    <article class="project">
+      <div class="media">
+        <video muted autoplay loop class="rounded-lg">
+          <source src="/videos/libsqlstudio-sql-query.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="media">
+        <video muted autoplay loop class="rounded-lg">
+          <source
+            src="https://r2.invisal.com/libsqlstudio-table-editor.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <header class="sticky-content">
+        <a href="https://libsqlstudio.com">
+          <Text variant="title" className="text-neon-pink hover:underline">
+            LibSQL Studio
+          </Text>
+        </a>
+        <Text variant="body">
+          Dive into LibSQL Studio, a fully-featured, lightweight cyberdeck for
+          exploring Turso, LibSQL, and rqlite directly from your browser
+        </Text>
+      </header>
+    </article>
+    <article class="project">
+      <div class="media">
+        <Image
+          src={khmerBlog}
+          alt="Khmer Blog Homepage"
+          loading="lazy"
+          quality="high"
+          format="webp"
+        />
+      </div>
+      <div class="sticky-content">
+        <a href="https://khmer.codes/">
+          <Text variant="title" className="text-neon-pink hover:underline"
+            >KhmerCoders Blog</Text
+          >
+        </a>
+        <Text variant="body">
+          A nexus where Khmer coders converge to innovate and thrive in the
+          digital expanse.
+        </Text>
+      </div>
+    </article>
   </div>
 </section>
