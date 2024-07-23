@@ -1,28 +1,35 @@
 ---
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-];
+import Text from "@/components/Text";
+
+const currentPath = Astro.url.pathname;
+const topLevelPath = currentPath.split("/")[1];
+
+const links = [{ href: "/about", label: "About" }];
 ---
 
-<nav>
+<nav aria-label="Main Navigation">
   <div class="container mx-auto p-4 flex mb-8 bg-background">
     <a href="/">
       <div class="text-foreground text-lg font-bold">Ave Aristov</div>
     </a>
     <div class="grow"></div>
     <ul class="flex space-x-4">
-      <!-- {
+      {
         links.map((link) => (
           <li>
-            <a href={link.href} class="text-foreground hover:text-primary">
-              {link.label}
+            <a
+              href={link.href}
+              class={`text-foreground hover:text-primary ${
+                topLevelPath === link.href.split("/")[1]
+                  ? "text-neon-pink font-bold"
+                  : ""
+              }`}
+            >
+              <Text variant="body">{link.label}</Text>
             </a>
           </li>
         ))
-      } -->
+      }
     </ul>
   </div>
 </nav>

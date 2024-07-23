@@ -1,17 +1,52 @@
 ---
 import Text from "@/components/Text";
 import SocialMediaLinks from "./SocialMediaLinks";
+import { Button } from "../ui/button";
 ---
 
 <section
   class="flex flex-col gap-4 container mx-auto text-foreground rounded-md text-pretty"
   aria-label="Track Beyond the Blackwall"
 >
-  <Text variant="subheading"> Track Beyond the Blackwall </Text>
+  <Text variant="subheading">Track Beyond the Blackwall</Text>
   <Text variant="body">
     Penetrate the Blackwall and trace their digital signal through the enigmatic
     void deep within cyberspace. Beyond the Blackwall, uncover the encrypted
     coordinates of their virtual existence.
   </Text>
   <SocialMediaLinks />
+  <div
+    class="flex justify-between items-center p-4 rounded border border-neon-pink bg-card"
+  >
+    <Text variant="body">
+      Encrypted Netrunner Uplink:
+      <span id="email" class="text-neon-pink">chantepkik@gmail.com</span>
+    </Text>
+    <Button
+      id="copyEmail"
+      className="rounded transition-colors duration-200"
+      aria-label="Copy email address"
+    >
+      Copy
+    </Button>
+  </div>
 </section>
+
+<script>
+  const emailElement = document.getElementById("email");
+  const copyButton = document.getElementById("copyEmail");
+
+  if (emailElement && copyButton) {
+    copyButton.addEventListener("click", () => {
+      const email = emailElement.textContent;
+      if (email) {
+        navigator.clipboard.writeText(email).then(() => {
+          copyButton.textContent = "Copied!";
+          setTimeout(() => {
+            copyButton.textContent = "Copy";
+          }, 2000);
+        });
+      }
+    });
+  }
+</script>
