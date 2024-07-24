@@ -14,4 +14,5 @@ export default defineConfig({
     }),
     sitemap(),
   ],
+  trailingSlash: "never",
 });
