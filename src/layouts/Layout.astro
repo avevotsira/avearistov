@@ -1,4 +1,5 @@
 ---
+// Layout.astro
 import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
 
@@ -6,21 +7,32 @@ import "@/styles/globals.css";
 
 interface Props {
   title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: "website" | "article";
+  siteTitle?: string;
+  author?: string;
+  authorUrl?: string;
 }
 
-const description =
-  "Meet Ave Aristov, a netrunner exploring the vast expanse of cyberspace. Each line of code is a step into the unknown, a journey through the digital cosmos fueled by boundless curiosity and the thrill of discovery.";
-const imageUrl = "https://www.avearis.com/avearistov.png";
-const siteUrl = "https://www.avearis.com";
-const author = "Ave Aristov";
-const title = author;
+const {
+  title,
+  description = "Meet Ave Aristov, a netrunner exploring the vast expanse of cyberspace.",
+  image = "https://www.avearis.com/avearistov.png",
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  type = "website",
+  siteTitle = "Ave Aristov",
+  author = "Ave Aristov",
+  authorUrl = "https://www.avearis.com",
+} = Astro.props;
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": type,
   name: author,
-  url: siteUrl,
-  image: imageUrl,
+  url: authorUrl,
+  image: image,
   sameAs: [
     "mailto:chantepkik@gmail.com",
     "https://www.facebook.com/Jakcrovat.Micasa/",
@@ -38,36 +50,53 @@ const jsonLd = {
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Ave Aristov, netrunner, open-source, LibSQL Studio, KhmerCoders, digital odyssey, technology, coding, developer"
-    />
     <meta name="author" content={author} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <link rel="canonical" href={siteUrl} />
-    <meta property="og:title" content={title} />
+
+    <title>{title} | {siteTitle}</title>
+
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph (OG) Meta Tags for social media sharing -->
+    <meta property="og:title" content={`${title} | ${siteTitle}`} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
-    <meta property="og:image" content={imageUrl} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:site_name" content={siteTitle} />
+
+    <!-- Twitter Card Meta Tags for Twitter sharing -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={`${title} | ${siteTitle}`} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={imageUrl} />
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <meta name="twitter:image" content={new URL(image, Astro.url)} />
+    <meta name="twitter:creator" content={author} />
+
+    <!-- JSON-LD for structured data (helps with SEO) -->
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd)}
+    />
+
+    <!-- Umami Analytics Script -->
+    <script
+      is:inline
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="4d43a4d9-7ad6-4c70-b797-4c0036797c0e"></script>
+
+    <slot name="head" />
   </head>
 
-  <header class="sticky top-0 z-50">
-    <Navbar />
-  </header>
-  <body>
+  <body class="min-h-screen">
+    <header class="sticky top-0 z-50">
+      <Navbar />
+    </header>
     <main class="flex flex-col gap-6">
       <slot />
     </main>
     <Footer />
   </body>
-
-
 </html>
