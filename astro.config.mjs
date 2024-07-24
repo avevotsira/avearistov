@@ -15,4 +15,7 @@ export default defineConfig({
     sitemap(),
   ],
   trailingSlash: "never",
+  build: {
+    format: "file",
+  },
 });
