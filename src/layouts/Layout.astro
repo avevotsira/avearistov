@@ -4,6 +4,8 @@ import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
 
 import "@/styles/globals.css";
+import type { TransitionAnimationPair } from "astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -41,6 +43,27 @@ const jsonLd = {
   ],
   jobTitle: "Netrunner",
   description: description,
+};
+
+const fadeAnim: TransitionAnimationPair = {
+  old: {
+    name: "fadeOut",
+    duration: "0.3s",
+    easing: "ease-in-out",
+    fillMode: "forwards",
+  },
+  new: {
+    name: "fadeIn",
+    duration: "0.3s",
+    delay: "0.3s",
+    easing: "ease-in-out",
+    fillMode: "backwards",
+  },
+};
+
+const viewTransition = {
+  forwards: fadeAnim,
+  backwards: fadeAnim,
 };
 ---
 
@@ -88,15 +111,44 @@ const jsonLd = {
       data-website-id="4d43a4d9-7ad6-4c70-b797-4c0036797c0e"></script>
 
     <slot name="head" />
+
+    <ViewTransitions />
   </head>
 
   <body class="min-h-screen">
     <header class="sticky top-0 z-50">
       <Navbar />
     </header>
-    <main class="flex flex-col gap-6">
+    <main
+      transition:animate={viewTransition}
+      transition:name="main"
+      class="flex flex-col gap-6"
+    >
       <slot />
     </main>
     <Footer />
+    <style>
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </body>
 </html>
