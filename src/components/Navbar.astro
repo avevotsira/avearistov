@@ -2,9 +2,14 @@
 import Text from "@/components/Text";
 
 const currentPath = Astro.url.pathname;
-const topLevelPath = currentPath.split("/")[1];
+const topLevelPath = currentPath.split("/")[1].replace(/\.html$/, "");
 
 const links = [{ href: "/about", label: "About" }];
+
+function isActiveLink(linkHref: string, currentTopLevelPath: string) {
+  const linkTopLevelPath = linkHref.split("/")[1];
+  return currentTopLevelPath === linkTopLevelPath;
+}
 ---
 
 <nav aria-label="Main Navigation">
@@ -20,7 +25,7 @@ const links = [{ href: "/about", label: "About" }];
             <a
               href={link.href}
               class={`text-foreground hover:text-primary ${
-                topLevelPath === link.href.split("/")[1]
+                isActiveLink(link.href, topLevelPath)
                   ? "text-neon-pink font-bold"
                   : ""
               }`}
