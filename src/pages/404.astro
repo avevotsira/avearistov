@@ -6,21 +6,21 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title={"Page Not Found"}>
   <div
-    class="flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-white text-center gap-4"
+    class="flex flex-col items-center justify-center text-center gap-4"
     style="min-height: calc(100vh - 70px);"
   >
-    <div class="flex flex-col gap-4 rounded-lg p-12">
+    <div class="flex flex-col gap-4 rounded-lg">
       <h1 class="text-4xl font-bold text-neon-pink">404</h1>
-      <p class="text-2xl font-light text-gray-800">
+      <p class="text-2xl font-light">
         {"Oops! The page you are looking for could not be found."}
       </p>
-      <p class="text-gray-600">
+      <p>
         {
           "It seems that the page you're trying to access doesn't exist or has been moved."
         }
       </p>
     </div>
-    <a href="/" aria-label="Go back to homepage" class="mt-12">
+    <a href="/" aria-label="Go back to homepage">
       <Button>
         {"Go back to homepage"}
       </Button>
