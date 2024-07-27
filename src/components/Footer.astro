@@ -1,7 +1,6 @@
 ---
 import Text from "@/components/Text";
-import LogoText from "../../assets/logo/TextOfLogo.svg";
-import Logo from "../../assets/logo/Logo.svg";
+import LogoHorizontal from "../../assets/logo/LogoHorizontal.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -13,12 +12,11 @@ import { Image } from "astro:assets";
           href="/"
           class="flex flex-row gap-2 mb-2 justify-center md:justify-start"
         >
-          <Image src={Logo} alt="Ave Aristov Logo" width={45} height={30} />
           <Image
-            src={LogoText}
+            src={LogoHorizontal}
             alt="Ave Aristov Logo"
-            width={125}
-            height={50}
+            width={250}
+            height={30}
           />
         </a>
         <Text variant="body" className="text-sm">
