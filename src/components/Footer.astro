@@ -1,6 +1,7 @@
 ---
 import Text from "@/components/Text";
-import Logo from "../../assets/logo/LogoText.svg";
+import LogoText from "../../assets/logo/TextOfLogo.svg";
+import Logo from "../../assets/logo/Logo.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -8,8 +9,15 @@ import { Image } from "astro:assets";
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-4 md:mb-0">
-        <a href="/">
-          <Image src={Logo} alt="Ave Aristov Logo" width={100} height={30} />
+        <a href="/" class="flex flex-row gap-2 mb-2">
+          <Image src={Logo} alt="Ave Aristov Logo" width={45} height={30} />
+          <Image
+            src={LogoText}
+            alt="Ave Aristov Logo"
+            width={125}
+            height={50}
+            class="md:block hidden"
+          />
         </a>
         <Text variant="body" className="text-sm">
           © 2024 Ave Aristov. All rights reserved.
