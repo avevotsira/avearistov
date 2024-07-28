@@ -1,11 +1,12 @@
 ## License
 
-This project is licensed under the Apache License, Version 2.0 with additional conditions - see the [LICENSE](LICENSE) file for full details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full details.
 
 Key points:
 
-- The license does not include rights to use the project's trademark or associated branding elements.
-- Feel free to fork this site, use it as inspiration, and modify it for your own projects, but please respect the design and do not claim it as your own.
+- The MIT License grants permission to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
+- The project's trademark and any associated branding elements are not part of this license. No permission is granted to use these elements without explicit authorization from the project owner.
+- While you're free to fork, modify, and use this project as inspiration, please respect the original design and do not claim it as your own.
 
 ---
 
