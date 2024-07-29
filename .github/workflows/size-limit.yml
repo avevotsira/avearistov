@@ -1,0 +1,22 @@
+name: Size Limit CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  size:
+    runs-on: ubuntu-latest
+    env:
+      CI_JOB_NUMBER: 1
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+      - run: npm ci
+      - uses: andresz1/size-limit-action@v1
+
