@@ -3,6 +3,7 @@ import Text from "@/components/Text";
 import { Image } from "astro:assets";
 import LogoHorizontal from "../../assets/logo/LogoHorizontal.svg";
 import Logo from "../../assets/logo/Logo.svg";
+import { ButtonLink } from "./ui/button-link";
 
 const currentPath = Astro.url.pathname;
 const topLevelPath = currentPath.split("/")[1].replace(/\.html$/, "");
@@ -15,6 +16,13 @@ function isActiveLink(linkHref: string, currentTopLevelPath: string) {
 }
 ---
 
+<ButtonLink
+  href="#main-content"
+  className="absolute left-0 m-3 -translate-y-16 transition focus:translate-y-0 text-foreground"
+  aria-label="Skip Navigation"
+>
+  Skip Navigation
+</ButtonLink>
 <nav aria-label="Main Navigation">
   <div class="container mx-auto p-4 flex items-center bg-background">
     <a href="/" class="flex flex-row gap-2">

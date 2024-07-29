@@ -2,14 +2,15 @@
 import AboutMe from "@/components/AboutMe.astro";
 import Layout from "../layouts/Layout.astro";
 import Project from "@/components/Portifillo/Project.astro";
+import Main from "@/components/Main.astro";
 ---
 
 <Layout title="Home">
-  <p
-    class="container p-8 text-center bg-destructive text-destructive-foreground"
-  >
-    Site under construction!
-  </p>
-  <AboutMe />
-  <Project />
+  <Main class="flex flex-col gap-8">
+    <p class="p-8 text-center bg-destructive text-destructive-foreground">
+      Site under construction!
+    </p>
+    <AboutMe />
+    <Project />
+  </Main>
 </Layout>
