@@ -48,10 +48,8 @@ function isActiveLink(linkHref: string, currentTopLevelPath: string) {
           <li>
             <a
               href={link.href}
-              class={`text-foreground hover:text-primary ${
-                isActiveLink(link.href, topLevelPath)
-                  ? "text-neon-pink font-bold"
-                  : ""
+              class={`text-neon-pink hover:text-neon-pink-hover nav-link ${
+                isActiveLink(link.href, topLevelPath) ? "active" : ""
               }`}
             >
               <Text variant="body">{link.label}</Text>
