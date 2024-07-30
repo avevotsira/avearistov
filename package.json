@@ -30,6 +30,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@size-limit/file": "^11.1.4",
     "size-limit": "^11.1.4"
   },
   "size-limit": [
@@ -47,4 +48,3 @@
     }
   ]
 }
-
