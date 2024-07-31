@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
@@ -22,5 +22,19 @@ export default defineConfig({
   },
   output: "hybrid",
   adapter: cloudflare(),
+  experimental: {
+    env: {
+      schema: {
+        OAUTH_GITHUB_CLIENT_ID: envField.string({
+          context: "server",
+          access: "secret",
+        }),
+        OAUTH_GITHUB_CLIENT_SECRET: envField.string({
+          context: "server",
+          access: "secret",
+        }),
+      },
+    },
+  },
 });
 
