@@ -26,7 +26,6 @@ export default {
         sans: ["Anuphan", "sans-serif"],
       },
       colors: {
-        "neon-pink": "hsl(var(--neon-pink))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -59,6 +58,10 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        "neon-pink": {
+          DEFAULT: "hsl(var(--neon-pink))",
+          hover: "hsl(var(--neon-pink-hover))",
         },
       },
       borderRadius: {
