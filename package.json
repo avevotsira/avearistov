@@ -35,18 +35,21 @@
   },
   "size-limit": [
     {
-      "path": "dist/**/*.html",
-      "limit": "50 kB",
+      "name": "/*.html",
+      "path": "dist/*.html",
+      "limit": "10 kB",
       "gzip": true
     },
     {
-      "path": "dist/**/*.css",
-      "limit": "20 kB",
-      "gzip": true
-    },
-    {
-      "path": "dist/**/*.js",
+      "name": "/_astro/*.js",
+      "path": "dist/_astro/*.js",
       "limit": "100 kB",
+      "gzip": true
+    },
+    {
+      "name": "/_astro/*.css",
+      "path": "dist/_astro/*.css",
+      "limit": "20 kB",
       "gzip": true
     }
   ]
