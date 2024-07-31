@@ -1,6 +1,10 @@
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  name: github
+  branch: main
+  repo: https://github.com/avevotsira/avearistov
+  site_domain: avearistov.com
+  base_url: https://avearistov.com
+  auth_endpoint: oauth
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
