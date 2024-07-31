@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: main
-  repo: https://github.com/avevotsira/avearistov
+  repo: avevotsira/avearistov
   site_domain: avearis.com
   base_url: https://www.avearis.com
   auth_endpoint: oauth
