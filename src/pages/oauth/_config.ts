@@ -6,3 +6,4 @@ export const clientSecret =
 
 export const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&scope=repo,user`;
 export const tokenUrl = "https://github.com/login/oauth/access_token";
+
