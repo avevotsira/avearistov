@@ -1,4 +1,8 @@
-## License
+# 🦉 Ave's Techno Treehouse
+
+👋 You've just stumbled upon Ave's Techno Treehouse, the secret hideout where I keep the source code for [avearistov.com](https://avearistov.com). Welcome to my little corner of the internet!
+
+## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full details.
 
@@ -10,6 +14,6 @@ Key points:
 
 ---
 
-## Acknowledgements
+## 🎩 Acknowledgements
 
 - The home page animation is inspired by [eva.town](https://github.com/evadecker/eva.town).
