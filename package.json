@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/cloudflare": "^11.0.1",
     "@astrojs/react": "^3.5.0",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
@@ -20,8 +21,10 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.10.1",
+    "astro-decap-cms-oauth": "^0.3.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "decap-cms-app": "^3.1.11",
     "lucide-react": "^0.394.0",
     "react": "^18.3.1",
     "tailwind-merge": "^2.3.0",
@@ -54,4 +57,3 @@
     }
   ]
 }
-
