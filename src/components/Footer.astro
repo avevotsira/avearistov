@@ -2,6 +2,7 @@
 import Text from "@/components/Text";
 import LogoHorizontal from "../../assets/logo/LogoHorizontal.svg";
 import { Image } from "astro:assets";
+import { ExternalLink } from "lucide-react";
 ---
 
 <footer class="bg-background text-foreground py-8 border-t border-gray-400">
@@ -23,9 +24,10 @@ import { Image } from "astro:assets";
           © 2024 Ave Aristov. All rights reserved.
         </Text>
       </div>
-      <div class="text-sm">
-        <Text variant="body">
-          Powered by <a
+      <div class="flex flex-row gap-2 items-center">
+        Powered by
+        <Text variant="body" className="flex flex-row gap-2 items-center">
+          <ExternalLink className="text-neon-pink" size={16} /><a
             href="https://astro.build"
             target="_blank"
             rel="noopener noreferrer"
