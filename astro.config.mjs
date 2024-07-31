@@ -4,7 +4,6 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
 import cloudflare from "@astrojs/cloudflare";
-import decapCmsOauth from "astro-decap-cms-oauth";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +15,6 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap(),
-    decapCmsOauth(),
   ],
   trailingSlash: "never",
   build: {
