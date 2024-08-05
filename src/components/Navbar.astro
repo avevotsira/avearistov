@@ -4,9 +4,10 @@ import { Image } from "astro:assets";
 import LogoHorizontal from "../../assets/logo/LogoHorizontal.svg";
 import Logo from "../../assets/logo/Logo.svg";
 import { ButtonLink } from "./ui/button-link";
+import { normalizeUrl } from "@/lib/route";
 
 const currentPath = Astro.url.pathname;
-const topLevelPath = currentPath.split("/")[1].replace(/\.html$/, "");
+const topLevelPath = normalizeUrl(currentPath).split("/")[1];
 
 const links = [{ href: "/about", label: "About" }];
 
