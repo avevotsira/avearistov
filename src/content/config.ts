@@ -1,7 +1,6 @@
 import { defineCollection, z } from "astro:content";
 
 const projectsCollection = defineCollection({
-  type: "content",
   schema: ({ image }) =>
     z.object({
       title: z.string(),
