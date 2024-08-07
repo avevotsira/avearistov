@@ -4,6 +4,6 @@ description: "Dive into LibSQL Studio, a fully-featured, lightweight cyberdeck f
 link: "https://libsqlstudio.com"
 media:
   - type: "video"
-    src: "/videos/libsqlstudio-sql-query.mp4"
+    src: "/src/assets/videos/libsqlstudio-sql-query.mp4"
 ---
 
