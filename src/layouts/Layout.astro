@@ -6,6 +6,8 @@ import Navbar from "@/components/Navbar.astro";
 import "@/styles/globals.css";
 import { ViewTransitions } from "astro:transitions";
 
+import TableOfContents from "@/components/TableOfContents";
+
 interface Props {
   title: string;
   description?: string;
@@ -99,7 +101,6 @@ const jsonLd = {
     </header>
 
     <slot />
-
     <Footer />
   </body>
 </html>
