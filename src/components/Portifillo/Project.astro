@@ -1,57 +1,13 @@
 ---
-import type { ImageMetadata } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Text from "@/components/Text";
 import { Image } from "astro:assets";
-import khmerBlog from "src/assets/pictures/khmerblog.png";
-import { ExternalLink } from "lucide-react";
 
-interface VideoMedia {
-  type: "video";
-  src: string;
+interface Props {
+  projects: CollectionEntry<"projects">[];
 }
 
-interface ImageMedia {
-  type: "image";
-  src: ImageMetadata;
-  alt: string;
-}
-
-type MediaItem = VideoMedia | ImageMedia;
-
-interface Project {
-  title: string;
-  description: string;
-  link: string;
-  media: MediaItem[];
-}
-
-const projects: Project[] = [
-  {
-    title: "LibSQL Studio",
-    description:
-      "Dive into LibSQL Studio, a fully-featured, lightweight cyberdeck for exploring Turso, LibSQL, and rqlite directly from your browser",
-    link: "https://libsqlstudio.com",
-    media: [
-      {
-        type: "video",
-        src: "/videos/libsqlstudio-sql-query.mp4",
-      },
-    ],
-  },
-  {
-    title: "KhmerCoders Blog",
-    description:
-      "A nexus where Khmer coders converge to innovate and thrive in the digital expanse.",
-    link: "https://khmer.codes/",
-    media: [
-      {
-        type: "image",
-        src: khmerBlog,
-        alt: "Khmer Blog Homepage",
-      },
-    ],
-  },
-];
+const { projects } = Astro.props;
 ---
 
 <section
@@ -66,9 +22,9 @@ const projects: Project[] = [
     </Text>
 
     {
-      projects.map((project: Project) => (
+      projects.map((project) => (
         <article class="project">
-          {project.media.map((media: MediaItem) => (
+          {project.data.media.map((media) => (
             <div class="media">
               {media.type === "video" ? (
                 <video muted autoplay loop class="rounded-lg">
@@ -88,19 +44,18 @@ const projects: Project[] = [
           <div class="sticky-content">
             <Text
               variant="title"
-              className="text-neon-pink  scroll-m-20 text-xl font-semibold tracking-tight  flex flex-row items-center gap-2"
+              className="text-neon-pink scroll-m-20 text-xl font-semibold tracking-tight flex flex-row items-center gap-2"
             >
-              <ExternalLink />
               <a
                 class="hover:underline nav-link"
-                href={project.link}
+                href={project.data.link}
                 aria-label="open new tab"
               >
-                {project.title}
+                {project.data.title}
               </a>
             </Text>
 
-            <Text variant="body">{project.description}</Text>
+            <Text variant="body">{project.data.description}</Text>
           </div>
         </article>
       ))
