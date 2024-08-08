@@ -1,6 +1,6 @@
 # 🦉 Ave's Techno Treehouse
 
-👋 You've just stumbled upon Ave's Techno Treehouse, the secret hideout where I keep the source code for [avearistov.com](https://avearistov.com). Welcome to my little corner of the internet!
+👋 You've just stumbled upon Ave's Techno Treehouse, the secret hideout where I keep the source code for [avearis.com](https://avearis.com). Welcome to my little corner of the internet!
 
 ## 📜 License
 
