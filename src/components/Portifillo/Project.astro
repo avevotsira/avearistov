@@ -49,7 +49,9 @@ const { projects } = Astro.props;
               <a
                 class="hover:underline nav-link"
                 href={project.data.link}
-                aria-label="open new tab"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open project in new tab"
               >
                 {project.data.title}
               </a>
