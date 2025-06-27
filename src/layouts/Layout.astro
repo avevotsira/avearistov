@@ -1,6 +1,7 @@
 ---
 // Layout.astro
 import Footer from "@/components/Footer.astro";
+import { normalizeUrl } from "@/lib/route";
 import Navbar from "@/components/Navbar.astro";
 
 import "@/styles/globals.css";
@@ -23,7 +24,7 @@ const {
   title,
   description = "Meet Ave Aristov, a netrunner exploring the vast expanse of cyberspace.",
   image = "https://www.avearis.com/avearistov.jpg",
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  canonicalURL = normalizeUrl(new URL(Astro.url.pathname, Astro.site).href),
   type = "website",
   siteTitle = "Ave Aristov",
   author = "Ave Aristov",
@@ -42,7 +43,7 @@ const jsonLd = {
     "https://github.com/avevotsira",
     "https://discordapp.com/users/287134296811110402",
   ],
-  jobTitle: "Netrunner",
+  jobTitle: "Software Developer",
   description: description,
 };
 ---
@@ -55,6 +56,7 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content={author} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title} | {siteTitle}</title>

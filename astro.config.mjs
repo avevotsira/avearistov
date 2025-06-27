@@ -14,7 +14,12 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) =>
+        !page.includes("/admin") &&
+        !page.includes("/oauth") &&
+        !page.includes("/oauth/callback"),
+    }),
   ],
   trailingSlash: "never",
   build: {
