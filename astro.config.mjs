@@ -7,7 +7,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.avearis.com",
+  site: "https://www.avearistov.com",
   publicDir: "assets",
   integrations: [
     react(),
@@ -46,4 +46,3 @@ export default defineConfig({
     },
   },
 });
-
