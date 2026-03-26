@@ -4,6 +4,7 @@ const getRobotsTxt = (sitemapURL: URL) => `
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /ledger
 Disallow: /oauth
 Disallow: /oauth/callback
 

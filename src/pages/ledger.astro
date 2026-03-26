@@ -1,0 +1,16 @@
+---
+import ScoreLedger from "@/components/ScoreLedger";
+import Main from "@/components/Main.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Ledger">
+  <meta
+    slot="head"
+    name="robots"
+    content="noindex, nofollow"
+  />
+  <Main>
+    <ScoreLedger client:load />
+  </Main>
+</Layout>
