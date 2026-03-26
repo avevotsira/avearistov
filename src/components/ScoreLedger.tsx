@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   ALLOWED_DELTAS,
   addAction,
+  type AllowedDelta,
   getAllActions,
   type LedgerAction,
   undoLastAction,
@@ -34,7 +35,8 @@ function deriveStats(actions: LedgerAction[]) {
 }
 
 const WIN_DELTAS = ALLOWED_DELTAS.filter((d) => d > 0);
-const LOSS_DELTAS = ALLOWED_DELTAS.filter((d) => d < 0);
+/** Match win row: same magnitudes left → right (−1 under +1, …, −5 under +5). */
+const LOSS_DELTAS: readonly AllowedDelta[] = [-1, -2, -3, -5];
 
 export default function ScoreLedger() {
   const [actions, setActions] = useState<LedgerAction[]>([]);
