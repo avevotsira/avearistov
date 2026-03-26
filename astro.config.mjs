@@ -17,6 +17,7 @@ export default defineConfig({
     sitemap({
       filter: (page) =>
         !page.includes("/admin") &&
+        !page.includes("/ledger") &&
         !page.includes("/oauth") &&
         !page.includes("/oauth/callback"),
     }),
