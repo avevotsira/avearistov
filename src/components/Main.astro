@@ -1,6 +1,7 @@
 ---
 import { cn } from "@/lib/utils";
 import type { TransitionAnimationPair } from "astro";
+import TableOfContents from "./TableOfContents";
 
 const { class: additionalClasses } = Astro.props;
 
@@ -30,12 +31,20 @@ const viewTransition = {
   id="main-content"
   class={cn(
     "container mx-auto px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8",
+    "flex flex-col lg:flex-row gap-8",
     additionalClasses
   )}
   transition:animate={viewTransition}
   transition:name="main"
 >
-  <slot />
+  <div class="flex-grow">
+    <slot />
+  </div>
+  <aside
+    class="shrink-0 bg-card text-card-foreground rounded-lg shadow-md lg:w-64 lg:sticky lg:top-4 lg:self-start lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto hidden sm:block"
+  >
+    <TableOfContents client:load />
+  </aside>
 </main>
 
 <style>

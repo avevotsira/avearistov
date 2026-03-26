@@ -3,6 +3,11 @@ import type { CollectionEntry } from "astro:content";
 import Text from "@/components/Text";
 import { Image } from "astro:assets";
 
+import khmerBlog from "src/assets/pictures/khmerblog.png";
+import { ExternalLink } from "lucide-react";
+import { slugify } from "@/lib/utils";
+
+
 interface Props {
   projects: CollectionEntry<"projects">[];
 }
@@ -14,7 +19,9 @@ const { projects } = Astro.props;
   class="text-foreground grow h-full rounded-md"
   aria-label="Open Source Chronicles"
 >
-  <Text variant="subheading" className="mb-6">Open Source Chronicles</Text>
+  <Text variant="subheading" className="mb-6" id="open-source-chronicles"
+    >Open Source Chronicles</Text
+  >
   <div class="space-y-6 text-pretty">
     <Text variant="paragraph">
       Jack into their open-source contributions, each project a chapter in the
@@ -44,6 +51,8 @@ const { projects } = Astro.props;
           <div class="sticky-content">
             <Text
               variant="title"
+              className="text-neon-pink  scroll-m-20 text-xl font-semibold tracking-tight  flex flex-row items-center gap-2"
+              id={slugify(project.title)}
               className="text-neon-pink scroll-m-20 text-xl font-semibold tracking-tight flex flex-row items-center gap-2"
             >
               <a
